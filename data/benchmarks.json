@@ -1,0 +1,9 @@
+{
+  "university_entrance": {
+    "directory": "university_entrance",
+    "titles": {
+      "TR": "Test 1: Üniversiteye Giriş Sınavı",
+      "EN": "Test 1: Turkish University Entrance Exam"
+    }
+  }
+}

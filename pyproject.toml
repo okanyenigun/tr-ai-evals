@@ -1,0 +1,23 @@
+[project]
+name = "tr-ai-evals"
+version = "0.1.0"
+description = "Custom Turkish AI benchmarks and an interactive results explorer"
+readme = "README.md"
+authors = [
+    { name = "okanyenigun", email = "okanyenigun@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "gradio==6.29.1",
+    "pandas>=3.0.6,<4",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.20,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+notebook = [
+    "jupyterlab>=4.6.4",
+    "nbconvert>=7.17.1",
+]

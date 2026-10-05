@@ -1,0 +1,112 @@
+[
+  {
+    "Experiment": 1,
+    "Model": "gemma3:27b",
+    "Questions": 4895,
+    "Correct": 1231,
+    "Incorrect": 3664,
+    "Invalid / missing": 0,
+    "Accuracy": 0.251481103166496,
+    "Valid-answer rate": 1.0,
+    "Accuracy among valid predictions": 0.251481103166496
+  },
+  {
+    "Experiment": 2,
+    "Model": "gemma4:31b",
+    "Questions": 4895,
+    "Correct": 3535,
+    "Incorrect": 1360,
+    "Invalid / missing": 25,
+    "Accuracy": 0.722165474974464,
+    "Valid-answer rate": 0.994892747701736,
+    "Accuracy among valid predictions": 0.725872689938398
+  },
+  {
+    "Experiment": 3,
+    "Model": "qwen3.8:27b",
+    "Questions": 4895,
+    "Correct": 4389,
+    "Incorrect": 506,
+    "Invalid / missing": 22,
+    "Accuracy": 0.896629213483146,
+    "Valid-answer rate": 0.995505617977528,
+    "Accuracy among valid predictions": 0.900677200902935
+  },
+  {
+    "Experiment": 4,
+    "Model": "ministral-3:14b",
+    "Questions": 4895,
+    "Correct": 2687,
+    "Incorrect": 2208,
+    "Invalid / missing": 0,
+    "Accuracy": 0.548927477017365,
+    "Valid-answer rate": 1.0,
+    "Accuracy among valid predictions": 0.548927477017365
+  },
+  {
+    "Experiment": 5,
+    "Model": "gemma4:e4b",
+    "Questions": 4895,
+    "Correct": 3664,
+    "Incorrect": 1231,
+    "Invalid / missing": 0,
+    "Accuracy": 0.748518896833504,
+    "Valid-answer rate": 1.0,
+    "Accuracy among valid predictions": 0.748518896833504
+  },
+  {
+    "Experiment": 6,
+    "Model": "mistral-small3.2:latest",
+    "Questions": 4895,
+    "Correct": 2496,
+    "Incorrect": 2399,
+    "Invalid / missing": 0,
+    "Accuracy": 0.509908069458631,
+    "Valid-answer rate": 1.0,
+    "Accuracy among valid predictions": 0.509908069458631
+  },
+  {
+    "Experiment": 7,
+    "Model": "gemma3:4b",
+    "Questions": 4895,
+    "Correct": 1471,
+    "Incorrect": 3424,
+    "Invalid / missing": 0,
+    "Accuracy": 0.300510725229826,
+    "Valid-answer rate": 1.0,
+    "Accuracy among valid predictions": 0.300510725229826
+  },
+  {
+    "Experiment": 8,
+    "Model": "ornith-1.5:35b",
+    "Questions": 4895,
+    "Correct": 4186,
+    "Incorrect": 709,
+    "Invalid / missing": 323,
+    "Accuracy": 0.855158324821246,
+    "Valid-answer rate": 0.934014300306435,
+    "Accuracy among valid predictions": 0.915573053368329
+  },
+  {
+    "Experiment": 9,
+    "Model": "muse-glimmer:30b",
+    "Questions": 4895,
+    "Correct": 4393,
+    "Incorrect": 502,
+    "Invalid / missing": 20,
+    "Accuracy": 0.897446373850868,
+    "Valid-answer rate": 0.995914198161389,
+    "Accuracy among valid predictions": 0.901128205128205
+  },
+  {
+    "Experiment": 10,
+    "Model": "llama3.2-vision",
+    "Questions": 4895,
+    "Correct": 1428,
+    "Incorrect": 3467,
+    "Invalid / missing": 611,
+    "Accuracy": 0.291726251276813,
+    "Valid-answer rate": 0.875178753830439,
+    "Accuracy among valid predictions": 0.333333333333333
+  }
+]
