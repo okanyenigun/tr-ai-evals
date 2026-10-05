@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d7668">
+  <meta name="description" content="Türkçe yapay zekâ testleri: model ve ders bazında karşılaştırmalı sonuçlar.">
+  <title>Türkçe Yapay Zekâ Karşılaştırmaları</title>
+  <link rel="stylesheet" href="./web/styles.css">
+  <script type="module" src="./web/app.mjs"></script>
+</head>
+<body>
+  <main class="app">
+    <header class="page-header">
+      <div><p class="eyebrow">TR AI EVALS</p><h1 id="title">Türkçe Yapay Zekâ Karşılaştırmaları</h1><p id="intro" class="intro"></p></div>
+      <div class="language" role="group" aria-label="Dil / Language">
+        <button type="button" data-language="TR" aria-pressed="true">TR</button>
+        <button type="button" data-language="EN" aria-pressed="false">EN</button>
+      </div>
+    </header>
+
+    <section class="benchmark-card">
+      <label id="benchmark-label" for="benchmark">Test</label>
+      <select id="benchmark" disabled></select>
+      <p id="stats" class="stats" aria-live="polite"></p>
+    </section>
+
+    <div id="error" class="error" role="alert" hidden><p id="error-message"></p><button id="retry" type="button"></button></div>
+    <div class="tabs" role="tablist" aria-label="Sonuç tabloları" id="tabs">
+      <button type="button" role="tab" id="tab-overall" data-tab="overall" aria-selected="true" aria-controls="results-panel"></button>
+      <button type="button" role="tab" id="tab-course" data-tab="course" aria-selected="false" aria-controls="results-panel" tabindex="-1"></button>
+    </div>
+
+    <section id="results-panel" role="tabpanel" aria-labelledby="tab-overall">
+      <fieldset id="filters" class="filters" disabled>
+        <legend class="sr-only" id="filters-label"></legend>
+        <div class="filter" id="model-filter"></div>
+        <div class="filter" id="course-filter" hidden></div>
+        <div class="filter" id="accuracy-filter">
+          <label id="minimum-label" for="minimum"></label>
+          <div class="accuracy-inputs"><input id="minimum" type="range" min="0" max="100" step="1" value="0"><input id="minimum-number" type="number" min="0" max="100" step="1" value="0"></div>
+        </div>
+        <div class="filter"><label id="sort-label" for="sort"></label><select id="sort"></select></div>
+        <div class="filter order-filter"><label id="order-label" for="order"></label><select id="order"><option value="desc"></option><option value="asc"></option></select></div>
+      </fieldset>
+      <div class="table-toolbar"><p id="row-count" role="status" aria-live="polite"></p><div class="actions"><button id="reset" class="secondary" type="button" disabled></button><button id="download" class="primary" type="button" disabled></button></div></div>
+      <div class="table-scroll" tabindex="0" id="table-scroll"><table id="results"><caption class="sr-only" id="table-caption"></caption><thead></thead><tbody></tbody></table></div>
+      <p id="empty" class="empty" hidden></p>
+    </section>
+    <noscript>Bu uygulama için JavaScript'i etkinleştirin. / Enable JavaScript to explore the results.</noscript>
+  </main>
+</body>
+</html>

@@ -1,12 +1,10 @@
 ---
 title: Turkish AI Benchmarks
-emoji: 🇹🇷
+emoji: 📊
 colorFrom: green
 colorTo: blue
-sdk: gradio
-sdk_version: 6.29.1
-python_version: "3.13"
-app_file: app.py
+sdk: static
+app_file: index.html
 pinned: false
 short_description: Explore Turkish AI benchmark results by model and course
 ---

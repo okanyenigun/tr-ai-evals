@@ -2,6 +2,9 @@
 
 A collection of custom benchmarks evaluating AI models on Turkish-language tasks.
 
+[Explore the interactive results](https://huggingface.co/spaces/yeniguno/tr-ai-evals)
+in Turkish or English.
+
 ## Test 1: Turkish University Entrance Exam
 
 The first benchmark evaluates 10 AI models on 4,895 Turkish university entrance
