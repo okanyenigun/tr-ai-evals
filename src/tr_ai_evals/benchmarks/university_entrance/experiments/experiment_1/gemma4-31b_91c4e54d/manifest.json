@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-11-01T16:46:47.612517+00:00",
+  "experiment": 1,
+  "model": "gemma4:31b",
+  "model_digest": "6316f0629137b426c9d9b853ffc4c8209589f30ee39aebede6285096c0ff47e7",
+  "dataset": {
+    "name": "tr_uni_exam_questions",
+    "version": "v1",
+    "revision": "078b26435e0c2aaebdf63ea22956289d41aaae39"
+  },
+  "prompt": {
+    "name": "tr_uni_exam_system",
+    "version": "v1",
+    "hash": "b2d66622"
+  },
+  "human_query": {
+    "name": "tr_uni_exam_human_query",
+    "version": "v1",
+    "hash": "c4ea7504"
+  },
+  "params": {
+    "name": "tr_uni_exam_params",
+    "version": "v1",
+    "hash": "916a2d40"
+  },
+  "schema": {
+    "name": "tr_uni_exam_answer",
+    "version": "v1",
+    "hash": "5885d8be"
+  },
+  "git_commit": "dbcad01",
+  "description": "Benchmark of 10 models on the cleaned dataset with versioned prompts.",
+  "run_id": "gemma4-31b_91c4e54d"
+}

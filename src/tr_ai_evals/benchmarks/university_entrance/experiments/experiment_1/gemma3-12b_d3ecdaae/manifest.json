@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-11-01T14:08:46.582553+00:00",
+  "experiment": 1,
+  "model": "gemma3:12b",
+  "model_digest": "f4031aab637d1ffa37b42570452ae0e4fad0314754d17ded67322e4b95836f8a",
+  "dataset": {
+    "name": "tr_uni_exam_questions",
+    "version": "v1",
+    "revision": "078b26435e0c2aaebdf63ea22956289d41aaae39"
+  },
+  "prompt": {
+    "name": "tr_uni_exam_system",
+    "version": "v1",
+    "hash": "b2d66622"
+  },
+  "human_query": {
+    "name": "tr_uni_exam_human_query",
+    "version": "v1",
+    "hash": "c4ea7504"
+  },
+  "params": {
+    "name": "tr_uni_exam_params",
+    "version": "v1",
+    "hash": "916a2d40"
+  },
+  "schema": {
+    "name": "tr_uni_exam_answer",
+    "version": "v1",
+    "hash": "5885d8be"
+  },
+  "git_commit": "dbcad01",
+  "description": "<TEXT DESCRIPTION OF THE EXPERIMENT>",
+  "run_id": "gemma3-12b_d3ecdaae"
+}
