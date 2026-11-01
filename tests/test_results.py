@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from tr_ai_evals.results import BenchmarkResults, csv_download
+from tr_ai_evals.explorer.results import BenchmarkResults, csv_download
 
 DATA_DIR = Path(__file__).resolve().parents[1] / "data" / "university_entrance"
 

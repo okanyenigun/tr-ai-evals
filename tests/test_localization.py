@@ -2,7 +2,7 @@ import unittest
 
 import pandas as pd
 
-from tr_ai_evals.localization import localized_table
+from tr_ai_evals.explorer.localization import localized_table
 
 
 class LocalizationTests(unittest.TestCase):

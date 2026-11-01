@@ -6,14 +6,14 @@ from pathlib import Path
 import gradio as gr
 import pandas as pd
 
-from tr_ai_evals.localization import (
+from tr_ai_evals.explorer.localization import (
     course_label,
     header_label,
     localized_table,
     row_summary,
     text,
 )
-from tr_ai_evals.results import BenchmarkResults, csv_download
+from tr_ai_evals.explorer.results import BenchmarkResults, csv_download
 
 DATA_ROOT = Path(__file__).resolve().parent / "data"
 ORDER = ["Highest first", "Lowest first"]
