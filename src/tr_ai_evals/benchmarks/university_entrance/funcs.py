@@ -163,13 +163,14 @@ def run_experiment(
     system_prompt: str,
     build_human_query: Callable[[dict], str],
     questions: list[dict],
+    retry_failed: bool = False,
 ) -> dict:
     """Ask every question, saving each answer as it arrives; a re-run continues where this one stopped.
 
     Results go to experiments/experiment_<number>/<run id>/: manifest.json and answers.jsonl,
     with one line per attempt. The same settings give the same run id, so they continue the same
-    run; different settings start a new one. Questions not asked yet come first, then earlier
-    failures are retried.
+    run; different settings start a new one. A failed question keeps its failure and counts as wrong.
+    Pass retry_failed=True to ask failed questions again, e.g. after an outage made them fail.
     """
     run_id = generate_run_id(manifest)
     folder = EXPERIMENTS_DIR / f"experiment_{manifest['experiment']}" / run_id
@@ -186,14 +187,16 @@ def run_experiment(
     records = read_answers(answers_path)
 
     not_asked = [question for question in questions if question["id"] not in records]
-    to_retry = [
+    failed = [
         question
         for question in questions
         if question["id"] in records and records[question["id"]]["llm_answer"] is None
     ]
+    to_retry = failed if retry_failed else []
     print(
-        f"Experiment {manifest['experiment']}, run {run_id}: {len(questions) - len(not_asked) - len(to_retry)} done, "
-        f"{len(not_asked)} not asked, {len(to_retry)} failed before and will be retried."
+        f"Experiment {manifest['experiment']}, run {run_id}: {len(questions) - len(not_asked) - len(failed)} done, "
+        f"{len(not_asked)} not asked, {len(failed)} failed"
+        + (" and will be retried." if retry_failed else ".")
     )
 
     consecutive_failures = 0
@@ -231,7 +234,7 @@ def run_experiment(
                 if consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
                     raise RuntimeError(
                         f"Stopped after {consecutive_failures} failures in a row. Last error: {error}. "
-                        "Fix the problem and run again; failed questions will be retried."
+                        "Fix the problem, then run again with retry_failed=True to ask the failed questions again."
                     )
                 if (
                     len(records) == MIN_ACCURACY_AFTER

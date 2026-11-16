@@ -32,10 +32,13 @@ MODELS = [
     "gemma3:4b",
     "ornith-1.5:35b",
     "muse-glimmer:30b",
-    "llama3.2-vision",
+    "gemma3:12b",
 ]
 # Download models that are not installed. Set to False to skip them instead.
 PULL_MISSING_MODELS = True
+# Failed questions count as wrong and are not asked again. Set to True only when they failed
+# for reasons outside the model, such as Ollama being down.
+RETRY_FAILED = False
 
 DATASET_NAME = "tr_uni_exam_questions"
 DATASET_VERSION = "v1"
@@ -97,7 +100,12 @@ def main() -> int:
                 answer_schema
             )
             summaries[model] = run_experiment(
-                manifest, llm, system_prompt, build_human_query, data
+                manifest,
+                llm,
+                system_prompt,
+                build_human_query,
+                data,
+                retry_failed=RETRY_FAILED,
             )
         except Exception as error:
             problems[model] = f"{type(error).__name__}: {error}"
