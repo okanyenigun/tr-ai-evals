@@ -13,3 +13,6 @@ wheels/
 # Notebook and tool caches
 .ipynb_checkpoints/
 .ruff_cache/
+
+# Benchmark run outputs stay local
+src/tr_ai_evals/benchmarks/*/experiments/
