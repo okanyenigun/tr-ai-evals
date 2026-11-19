@@ -22,3 +22,4 @@ This project evaluates models on Turkish-language tasks, the way someone choosin
 | Benchmark | What it measures | Report | Code |
 |---|---|---|---|
 | Turkish University Entrance Exam | Academic knowledge and reasoning, using 4,858 multiple-choice questions from ÖSS, YGS and LYS exams held in 2006–2017 | [Report](docs/reports/university_entrance_report.md) | [`university_entrance`](src/tr_ai_evals/benchmarks/university_entrance/) |
+| MMLU-TR | Academic and professional knowledge across 57 subjects, using 14,042 multiple-choice questions machine-translated from MMLU, with the English originals as a baseline | [Report](docs/reports/mmlu_tr_report.md) | [`mmlu_tr`](src/tr_ai_evals/benchmarks/mmlu_tr/) |

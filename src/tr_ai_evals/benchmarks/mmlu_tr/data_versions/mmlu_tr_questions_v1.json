@@ -1,0 +1,9 @@
+{
+  "repo": "yeniguno/mmlu-tr",
+  "revision": "d2c8c04923d7b5a62608ffc58d8e582bc3666e08",
+  "num_rows": {
+    "dev": 285,
+    "validation": 1531,
+    "test": 14042
+  }
+}
